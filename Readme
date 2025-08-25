@@ -1,0 +1,118 @@
+# ============================================================================
+# Setup Instructions and Usage Examples
+# ============================================================================
+
+"""
+SETUP INSTRUCTIONS:
+==================
+
+1. Install required packages:
+   pip install locust faker pandas matplotlib psutil
+
+2. Update configuration in odoo_load_test.py:
+   - Change database name
+   - Update test user credentials
+   - Modify menu IDs to match your Odoo setup
+
+3. Generate test data (optional):
+   python -c "from test_data_generator import TestDataGenerator; TestDataGenerator.save_test_data()"
+
+4. Run tests:
+
+   # Interactive mode (with web UI)
+   locust -f odoo_load_test.py --host=https://your-odoo-domain.com
+
+   # Headless mode
+   locust -f odoo_load_test.py --host=https://your-odoo-domain.com -u 50 -r 5 -t 300s --headless
+
+   # Using the test runner
+   python run_test.py --host=https://your-odoo-domain.com --scenario=medium
+
+   # Run all scenarios
+   python run_test.py --host=https://your-odoo-domain.com --scenario=all --headless
+
+5. Analyze results:
+   python analysis.py results_medium_20231201_143000
+
+EXAMPLE COMMANDS:
+================
+
+# Light load test (10 users, 5 minutes)
+locust -f odoo_load_test.py --host=https://demo.odoo.com -u 10 -r 2 -t 5m --headless --csv=light_test
+
+# Medium load test (50 users, 15 minutes)
+locust -f odoo_load_test.py --host=https://demo.odoo.com -u 50 -r 5 -t 15m --headless --csv=medium_test
+
+# Heavy load test (100 users, 30 minutes)
+locust -f odoo_load_test.py --host=https://demo.odoo.com -u 100 -r 10 -t 30m --headless --csv=heavy_test
+
+# Stress test to find breaking point
+locust -f odoo_load_test.py --host=https://demo.odoo.com -u 200 -r 20 -t 10m --headless --csv=stress_test
+
+MONITORING DURING TESTS:
+=======================
+
+# Monitor system resources
+python -c "
+from monitoring import PerformanceMonitor
+import threading
+monitor = PerformanceMonitor()
+thread = threading.Thread(target=monitor.start_monitoring)
+thread.start()
+input('Press Enter to stop monitoring...')
+monitor.stop_monitoring()
+"
+
+KEY METRICS TO WATCH:
+====================
+
+1. Response Times:
+   - 50th percentile < 500ms (good)
+   - 95th percentile < 2000ms (acceptable)
+   - 99th percentile < 5000ms (concerning if higher)
+
+2. Throughput:
+   - Requests per second should remain stable
+   - Should not degrade significantly under load
+
+3. Error Rate:
+   - Should be < 1% for normal operations
+   - > 5% indicates serious issues
+
+4. Resource Utilization:
+   - CPU < 80% sustained
+   - Memory < 85% sustained
+   - Database connections within limits
+
+CUSTOMIZATION TIPS:
+==================
+
+1. Adjust task weights based on your usage patterns
+2. Add custom business logic for your specific modules
+3. Use real test data that matches your production data size
+4. Test with your actual user roles and permissions
+5. Include any custom fields or workflows in your tests
+
+TROUBLESHOOTING:
+===============
+
+1. Login failures:
+   - Check credentials in the test file
+   - Verify CSRF token extraction
+   - Check if 2FA is enabled (disable for testing)
+
+2. API call failures:
+   - Verify model names and field names
+   - Check access rights for test user
+   - Ensure required modules are installed
+
+3. Performance issues:
+   - Check Odoo worker configuration
+   - Monitor database performance
+   - Verify network latency
+
+4. Test data issues:
+   - Ensure referenced records exist (partners, products, etc.)
+   - Check foreign key constraints
+   - Verify category IDs and other references
+"""

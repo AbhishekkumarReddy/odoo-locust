@@ -1,0 +1,89 @@
+Count,Message,Traceback,Nodes
+14,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 155, in fetch_partners_data
+    response.failure(""Failed to fetch partners data"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+4,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 279, in create_product
+    response.failure(""Failed to create product"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+6,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 240, in create_partner
+    response.failure(""Failed to create partner"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+9,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 180, in fetch_products_data
+    response.failure(""Failed to fetch products data"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+1,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 498, in heavy_data_operations
+    response.failure(""Heavy data operation failed"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+6,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 205, in fetch_sales_orders
+    response.failure(""Failed to fetch sales orders"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+5,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 440, in search_with_filters
+    response.failure(""Failed to search with filters"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
+1,"If you want to change the state of the request using .success() or .failure(), you must pass catch_response=True. See http://docs.locust.io/en/stable/writing-a-locustfile.html#validating-responses","  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 340, in run
+    self.execute_next_task()
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 373, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/user/task.py"", line 490, in execute_task
+    task(self.user)
+  File ""/Users/abhishekreddy/Documents/Repos/odoo-locust/odoo_load_test.py"", line 465, in generate_report
+    response.failure(""Failed to generate report"")
+  File ""/Users/abhishekreddy/miniconda3/envs/odoo-18/lib/python3.12/site-packages/locust/clients.py"", line 444, in _missing_catch_response_True
+    raise LocustError(
+",local
